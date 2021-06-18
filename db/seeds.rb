@@ -8,3 +8,5 @@
 actor = Actor.new({first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock"})
 actor.save
 
+movie = Movie.new({title: "The Hangover",year: 2009, plot: "Three buddies wake up from a bachelor party in Las Vegas, with no memory of the previous night and the bachelor missing."})
+movie.save 
