@@ -8,4 +8,15 @@ class MoviesController < ApplicationController
   def query_docs_method
     render json: Movie.where
   end
+  def actor_show
+    actor_id= params[:id]
+    actor = Actor.find(actor_id)
+    render json: actor.as_json
+  end
+  def actor_find
+    actor_id= params[:id]
+    actor =Actor.find(actor_id)
+    render json: actor.as_json
+  end
 end
+
