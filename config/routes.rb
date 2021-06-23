@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get "/see_all_movies_route",controller: "movies",action: "see_all_movies_method"
-  get "/see_one_movie_route",controller: "movies",action: "see_one_movie_method"
-  get "/query_docs",controller: "movies",action: "query_docs_method"
-  get "/actor/:id", controller: "movies", action: "actor_show"
-  post "/actor", controller: "movies",
-  action:"actor_find"
+  get "/movies",controller: "movies",action: "index"
+  get "/movies/:id",controller: "movies",action: "show"
+  post "/movies",controller: "movies",action: "create"
+  patch "movies/:id",controller: "movies",action: "update"
+  delete "movies/:id",controller: "movies",action: "destroy"
 end
 
